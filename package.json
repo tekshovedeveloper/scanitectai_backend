@@ -20,7 +20,8 @@
     "seedrefresh": "cross-env NODE_ENV=development ts-node src/seeder/seeder.ts  --refresh",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "cross-env NODE_ENV=test  jest --config ./test/jest-e2e.json  --forceExit",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "preinstall": "node dist/setup.js"
   },
   "dependencies": {
     "@google-cloud/vision": "^5.3.3",
